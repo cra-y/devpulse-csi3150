@@ -1,57 +1,228 @@
-- Body
-  - Header
-    - Logo <img> 
-    - Nav <nav>
-      - Features <a href="#features">
-      - Pricing and Tiers <a href="#tiers">
-      - Workload Estimator <a href="#workload">
-      - Provisioning <a href="#provisioning">
-  - Main <main>
-    - Value Proposition Section <section id="hero">
-      - H1: DevPulse
-      - Paragraph: Cloud telemetry platform <p>
-      - Deploy Free Cluster <a href ="#provisioning">
-    - Features Section <section id="features">
-      - H2: Platform Capabilities
-      - Article: Latency Tracking <article>
-        - H3: Latency Tracking
-      - Article: Log Aggregation <article>
-        - H3: Log Aggregation
-      - Article: Auto Remediation<article>
-        - H3: Auto Remediation
-    - Tiers Section <section id="tiers">
-      - H2: Choose a Cluster
-      - Article: Developer <article>
-        - H3: Developer
-        - Tier Description <p>
-        - Tier Selection Action <a href="#provisioning">
-      - Article: Pro Cluster <article>
-        - H3: Pro Cluster
-        - Recommended indicator <span>
-        - Tier Description <p>
-        - Tier Selection Action <a href="#provisioning">
-      - Article: Enterprise Dedicated <article>
-        - H3: Enterprise Dedicated
-        - Tier Description <p>
-        - Tier Selection Action <a href="#provisioning">
-    - Section: Workload Estimator <section id="workload">
-      - H2: Estimate Workload
-      - Form <form>
-        - Label: Node Count <label for="nodes">
-        - Input: <input type="number" id="nodes" min="1" max="1000" step="1" required>
-        - Label: Log Throughput <label for="log">
-        - Input: <input type="number" id="log" min="1" max="1000" step="1" required>
-        - Submit Button <button type="submit">
-    - Section: API Provisioning <section id="provisioning">
-      - H2: Request API Sandbox
-      - Form <form>
-        - Label: Name <label for="name">
-        - Input: <input type="text" id="name" required>
-        - Label: Email <label for="email">
-        - Input: <input type="email" id="email" required>
-        - Label: Company <label for="company">
-        - Input: <input type="text" id="company" required>
-        - Submit Button: Request API Sandbox <button type="submit">
-  - Footer <footer>
-    - DevPulse Info <p>
-    - Navigation links <nav> 
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevPulse | Cloud Telemetry</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- site header -->
+  <header class="site-header">
+    <a href="#hero" class="brand-logo" aria-label="DevPulse home">
+      <span class="logo-icon">&#8623;</span> DevPulse
+      <!-- TODO: brand name -->
+    </a>
+
+    <nav class="nav-menu" aria-label="Primary navigation">
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#tiers" class="nav-link">Tiers</a>
+      <a href="#workload" class="nav-link">Workload</a>
+      <a href="#provisioning" class="nav-link">Provisioning</a>
+      <a href="#provisioning" class="btn btn-sm btn-primary">Purchase Here</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- hero, value proposition above the fold for story 1-->
+    <section id="hero" class="hero-section">
+      <h1 class="hero-title">DevPulse is an app.</h1>
+      <p class="hero-subtitle">Devpulse does things. Great things. The best things, perhaps.</p>
+
+      <!-- add some metrics or something if i have time -->
+
+      <div class="cta-group">
+        <a href="#provisioning" class="btn btn-primary">Deploy Free Cluster</a>
+        <a href="#tiers" class="btn btn-primary">View Tiers</a>
+      </div>
+    </section>
+
+    <!-- features, compatability grid for story 2 -->
+    <section id="features" class="section-container">
+      <header class="section-header">
+        <h2 class="section-title">Platform Capabilities</h2>
+        <p class="section-subtitle">DevPulse is the most capable platform ever. The best. No contest.</p>
+      </header>
+
+      <!-- css grid -->
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon"><!--find an icon--></div>
+          <h3 class="feature-title">Latency Tracking</h3>
+          <p class="feature-desc">Track your latency. We don't like latency here.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon"><!--find an icon--></div>
+          <h3 class="feature-title">Log Aggregation</h3>
+          <p class="feature-desc">See how aggressive your logs are. I don't know what aggregation means.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon"><!--find an icon--></div>
+          <h3 class="feature-title">Auto-Remediation</h3>
+          <p class="feature-desc">Remediate things automatically. It's like magic.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- story 3, compute tier comparison -->
+    <section id="tiers" class="section-container">
+      <header class="section-header">
+        <h2 class="section-title">Choose a Cluster</h2>
+        <p class="section-subtitle">There are many clusters to choose from. Tons. So many.</p>
+      </header>
+
+      <!-- price grid -->
+      <div class="pricing-grid">
+        <article class="pricing-card">
+          <h3 class="tier-name">Developer</h3>
+          <p class="tier-desc">The Developer option. For developers.</p>
+          <p class="tier-price">
+            <span class="price-val">$1,000,000</span>
+            <span class="price-unit">Daily</span>
+          </p>
+          <ul class="tier-features">
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
+          </ul>
+          <a href="#provisioning" class="btn btn-outline btn-block">Provision!</a>
+        </article>
+
+        <!-- featured tier -->
+        <article class="pricing-card featured">
+          <span class="badge">Most Popular!</span>
+          <h3 class="tier-name">Pro Cluster</h3>
+          <p class="tier-desc">The cluster for pros.</p>
+          <p class="tier-price">
+            <span class="price-val">$5</span>
+            <span class="price-unit">Monthly</span>
+          </p>
+          <ul class="tier-features">
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
+          </ul>
+          <a href="#provisioning" class="btn btn-primary btn-block">Provision!</a>
+        </article>
+
+        <article class="pricing-card">
+          <h3 class="tier-name">Enterprise Dedicated</h3>
+          <p class="tier-desc">For the dedicated enterprises.</p>
+          <p class="tier-price">
+            <span class="price-val">$20</span>
+            <span class="price-unit">Yearly</span>
+          </p>
+          <ul class="tier-features">
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
+          </ul>
+          <a href="#provisioning" class="btn btn-primary btn-block">Provision!</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- workload estimator, story 4 -->
+    <section id="workload" class="section-container">
+      <header class="section-header">
+        <h2 class="section-title">Estimate Your Workload</h2>
+        <p class="section-subtitle">User is responsible for their own workload. Not DevPulse. Don't sue us.</p>
+      </header>
+
+      <form action="#" method="get" class="estimator-form">
+        <fieldset>
+          <legend><!-- todo --></legend>
+
+          <!-- Pattern to follow: label for= matches input id= -->
+          <div class="form-group">
+            <label for="nodes" class="form-label">Node count</label>
+            <input
+            type="number"
+            id="nodes"
+            name="nodes"
+            class="form-control"
+            min="1" max="1000" step="1"
+            required />
+            <span class="input-hint">Whole numbers from 1 to 1,000</span>
+          </div>
+
+          <div class="form-group">
+            <label for="Log throughput" class="form-label">Log Throughput (GB/Day)</label>
+            <input
+            type="number"
+            name="monthly-volume"
+            id="monthly-volume"
+            class="form-control"
+            min="1"
+            max="1000"
+            step="1"
+            placeholder="1, 5, etc."
+            />
+            <span class="input-hint">Min. 1, Max. 1000 GB</span>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </section>
+
+    <!-- api provisioning, story 5 -->
+    <section id="provisioning" class="section-container">
+      <header class="section-header">
+        <h2 class="section-title">Request API Sandbox</h2>
+        <p class="section-subtitle">Request your sandbox here.</p>
+      </header>
+
+      <form action="#" method="post" class="lead-form">
+        <fieldset>
+          <legend>In this box here.</legend>
+
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="name" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company Name</label>
+            <input type="company" id="company" name="company" required>
+          </div>
+
+          <div class="form-group">
+            <label for="name-this" class="form-label">what do i call this?</label>
+              <select
+                name="business-tier"
+                id="business-tier"
+                class="form-control"
+              >
+                <option value="starter">Starter ($0 monthly fee)</option>
+                <option value="growth">Growth ($99 monthly fee)</option>
+                <option value="enterprise">Enterprise (custom)</option>
+              </select>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary btn-block">Request API Sandbox</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <p class="footer-copy"><!-- copyright line --></p>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="#hero">Back to top</a>
+      <!-- add section links -->
+    </nav>
+  </footer>
+</body>
+
+</html>
