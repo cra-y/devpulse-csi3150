@@ -26,7 +26,6 @@ html {
   scroll-behavior: smooth;
   font-family: var(--font-family);
   background-color: var(--bg-dark);
-  /* text font color */
   color: var(--text-main);
   line-height: 1.6;
   scroll-padding-top: 5rem;
@@ -51,12 +50,13 @@ html {
     border-color var(--transition-speed),
     color var(--transition-speed);
 }
+
 a:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 3px;
 }
 
-/* keyboard browsing using the TAB key */
+
 .btn:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 3px;
@@ -132,7 +132,6 @@ a:focus-visible {
   color: var(--primary);
 }
 
-/* next class */
 .nav-menu {
   /* use flexbox */
   display: flex;
@@ -185,4 +184,141 @@ the previous css block of code */
   gap: 1rem;
   /* if you need justfy-content and align-item just check your
   design and use them */
+}
+
+/* 2-D layout: Feautures section and pricing matrix section */
+.section-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  border-radius: 8px;
+  transition:
+    transform var(--transition-speed),
+    border-color var(--transition-speed);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+.feature-icon {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* pricing matrix */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.pricing-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform var(--transition-speed);
+}
+
+/* affordance - visual weight to the recommended tier */
+.pricing-card.featured {
+  border: 2px solid var(--primary);
+  background-color: rgba(99, 102, 241, 0.04);
+  transform: scale(1.03);
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.75rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.tier-name {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.tier-desc {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.tier-price {
+  margin-bottom: 1.5rem;
+}
+
+.price-val {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.price-unit {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.tier-features {
+  list-style-type: none;
+  margin-bottom: 2rem;
+  flex-grow: 1; /**pushes the button the bottom evenly*/
+}
+
+.tier-features li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--accent);
+  font-size: 0.9rem;
+  color: var(--text-muted);
 }
