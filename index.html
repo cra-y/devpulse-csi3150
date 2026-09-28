@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DevPulse | Cloud Telemetry</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -35,7 +35,7 @@
 
       <div class="cta-group">
         <a href="#provisioning" class="btn btn-primary">Deploy Free Cluster</a>
-        <a href="#tiers" class="btn btn-primary">View Tiers</a>
+        <a href="#tiers" class="btn btn-secondary">View Tiers</a>
       </div>
     </section>
 
@@ -121,7 +121,7 @@
             <li>Feature 2</li>
             <li>Feature 3</li>
           </ul>
-          <a href="#provisioning" class="btn btn-primary btn-block">Provision!</a>
+          <a href="#provisioning" class="btn btn-outline btn-block">Provision!</a>
         </article>
       </div>
     </section>
@@ -135,9 +135,9 @@
 
       <form action="#" method="get" class="estimator-form">
         <fieldset>
-          <legend><!-- todo --></legend>
+          <legend>Estimate your stuff</legend>
 
-          <!-- Pattern to follow: label for= matches input id= -->
+          <!-- label for= should match input id= -->
           <div class="form-group">
             <label for="nodes" class="form-label">Node count</label>
             <input
@@ -151,16 +151,17 @@
           </div>
 
           <div class="form-group">
-            <label for="Log throughput" class="form-label">Log Throughput (GB/Day)</label>
+            <label for="log-throughput" class="form-label">Log Throughput (GB/Day)</label>
             <input
             type="number"
-            name="monthly-volume"
-            id="monthly-volume"
+            name="log-throughput"
+            id="log-throughput"
             class="form-control"
             min="1"
             max="1000"
             step="1"
             placeholder="1, 5, etc."
+            required
             />
             <span class="input-hint">Min. 1, Max. 1000 GB</span>
           </div>
@@ -182,30 +183,31 @@
           <legend>In this box here.</legend>
 
           <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="name" id="name" name="name" required>
+           <label for="name" class="form-label">Your Name</label>
+           <input type="text" id="name" name="name" class="form-control" required>
           </div>
 
           <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+          </div>
+
+
+          <div class="form-group">
+            <label for="company" class="form-label">Company Name</label>
+            <input type="text" id="company" name="company" class="form-control" required>
           </div>
 
           <div class="form-group">
-            <label for="company">Company Name</label>
-            <input type="company" id="company" name="company" required>
-          </div>
-
-          <div class="form-group">
-            <label for="name-this" class="form-label">what do i call this?</label>
+            <label for="business-tier" class="form-label">what do i call this?</label>
               <select
                 name="business-tier"
                 id="business-tier"
                 class="form-control"
               >
-                <option value="starter">Starter ($0 monthly fee)</option>
-                <option value="growth">Growth ($99 monthly fee)</option>
-                <option value="enterprise">Enterprise (custom)</option>
+                <option value="developer">Developer ($0 monthly fee)</option>
+                <option value="pro-cluster">Pro Cluster ($99 monthly fee)</option>
+                <option value="enterprise">Enterprise Dedicated (custom)</option>
               </select>
             </div>
         </fieldset>
@@ -218,7 +220,7 @@
   <!-- footer -->
   <footer class="site-footer">
     <p class="footer-copy"><!-- copyright line --></p>
-    <nav class="footer-links" aria-label="Footer navigation">
+    <nav class="footer-links" aria-label="footer-navigation">
       <a href="#hero">Back to top</a>
       <!-- add section links -->
     </nav>
