@@ -138,7 +138,6 @@ a:focus-visible {
 .nav-menu {
   /* use flexbox */
   display: flex;
-  /* justify-content: space-evenly; /*dont use this if you use gap*/
   align-items: center;
   gap: 1.5rem; /*1.5 times of 16 px where 16 px is default font size of root(html node)*/
 }
@@ -150,11 +149,8 @@ a:focus-visible {
   transition: color var(--transition-speed);
 }
 
-/* add the trigger event (psuedo-classes) to trigger the transition in
-the previous css block of code */
-
 .nav-link:hover {
-  color: var(--text-main); /*this is animated*/
+  color: var(--text-main);
 }
 
 /* Hero section layout */
@@ -166,7 +162,7 @@ the previous css block of code */
   gap: 1.5rem;
   padding: 6rem 1.5rem 4rem 1.5rem;
   max-width: 900px;
-  margin: 0 auto; /*this will center a element on the page; only works if you have width or max-width declared in this block*/
+  margin: 0 auto; 
   text-align: center;
 }
 
@@ -185,8 +181,6 @@ the previous css block of code */
 .cta-group {
   display: flex;
   gap: 1rem;
-  /* if you need justfy-content and align-item just check your
-  design and use them */
 }
 
 /* 2-D layout: Feautures section and pricing matrix section */
@@ -428,7 +422,6 @@ legend {
 /*  reflow */
 @media (max-width: 768px) {
 
-  /* logo on top, nav wraps underneath. without this, links + button overflow phone screen sideways */
   .site-header {
     flex-direction: column;
     gap: 1rem;
